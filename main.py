@@ -1,4 +1,6 @@
 import requests
+from tkinter import *
+from tkinter.ttk import *
 from bs4 import BeautifulSoup
 
 
