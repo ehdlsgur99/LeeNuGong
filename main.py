@@ -1,10 +1,16 @@
 import requests
-from tkinter import *
-from tkinter.ttk import *
+import sys
+from PyQt5.QtWidgets import *
 from bs4 import BeautifulSoup
 
+app = QApplication(sys.argv)
 
-url = 'http://www.tukorea.ac.kr/contents/main/cor/noticehaksa.html'
+window = QWidget()
+window.show()
+
+app.exec_()
+
+url = 'http://www.tukorea.ac.kr/gopage/main/gonomalnotice.jsp?siteGubun=1&bbsConfigFK=357&pkid=195753&menuGubun=1'
 response = requests.get(url)
 
 print(response) # 응답 형식은 <Response [200]>
