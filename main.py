@@ -1,11 +1,19 @@
 import requests
 import sys
 from PyQt5.QtWidgets import *
+from PyQt5.QtGui import *
 from bs4 import BeautifulSoup
+
+class MyWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("이누공")
+        self.setGeometry(300, 300, 400, 400)
+        self.setWindowIcon(QIcon("icon.png"))
 
 app = QApplication(sys.argv)
 
-window = QWidget()
+window = MyWindow()
 window.show()
 
 app.exec_()
